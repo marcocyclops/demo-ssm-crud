@@ -1,0 +1,18 @@
+CREATE DATABASE `ssmbuild`;
+
+USE `ssmbuild`;
+
+DROP TABLE IF EXISTS `books`;
+
+CREATE TABLE `books` (
+    `bookID` INT(10) NOT NULL AUTO_INCREMENT COMMENT 'Book ID',
+    `bookName` VARCHAR(100) NOT NULL COMMENT 'Book Name',
+    `bookCounts` INT(11) NOT NULL COMMENT 'Quantity',
+    `detail` VARCHAR(200) NOT NULL COMMENT 'Description',
+    KEY `bookID` (`bookID`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8
+
+INSERT INTO `books`(`bookID`, `bookName`, `bookCounts`, `detail`) VALUES
+(1, 'Java', 1, 'Head First Java'),
+(2, 'MySQl', 10, 'MySQL Cookbook'),
+(3, 'Linux', 5, 'Linux Bible');

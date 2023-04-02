@@ -1,12 +1,45 @@
-/target/
-/.idea/
-/.vscode/
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Maven files
+target/
 *.iml
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA files
+.idea/
 *.ipr
 *.iws
-*.log
-*.out
-*.class
-*.war
-*.jar
-*.zip
+*.iml
+
+# NetBeans files
+nbproject/private/
+.build/
+dist/
+nb-configuration.xml
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~.nib
+.localized
