@@ -5,7 +5,7 @@
 </head>
 <body>
   <H3>
-    <a href="${pageContext.request.contextPath}/books/allbooks">Go to Books</a>
+    <a href="${pageContext.request.contextPath}/books/">Go to Books</a>
   </H3>
 </body>
 </html>
