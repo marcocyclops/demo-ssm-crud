@@ -1,1 +1,7 @@
+
+1.
 Requirement > Database design > Business logic > Frontend UI
+
+2.
+Controller call Service
+Service call DAO

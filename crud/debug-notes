@@ -1,0 +1,30 @@
+issue:
+org.springframework.beans.factory.NoSuchBeanDefinitionException:
+No qualifying bean of type 'com.marcodemo.service.BookService'
+
+degug:
+1.
+Check whether the bean is injected:
+Result: exist at src/main/resources/spring-service.xml.
+<bean id="BookServiceImpl" class="com.marcodemo.service.BookServiceImpl">
+    <property name="bookMapper" ref="bookMapper" />
+</bean>
+
+2.
+Use junit testing to check if the books could be queried success.
+Result: Able to query the books correctly, means MyBatis layer config correctly.
+
+3.
+Check Spring layer.
+
+4.
+Check Spring-mvc layer call the Spring-service layer.
+
+4.
+Spring-mvc layer:
+In web.xml, DispatcherServlet config, ContextConfigLocation set to spring-mvc.xml,
+but spring-mvc.xml doesn't contains BookServiceImpl bean, it's in spring-service.xml.
+To set the ContextConfigLocation to involve both spring-mvc.xml and spring-service.xml,
+we can config the ContextConfigLocation to applicationContext.xml,
+because it imported all 3 layers xml.
+
